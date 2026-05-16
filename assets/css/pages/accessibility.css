@@ -8,14 +8,12 @@ article section {
   border-bottom: 1px solid var(--color-navy-mid);
 }
 
-/* Centered Sections with Background */
+/* Centered Content - Even Sections */
 article section:nth-child(even) {
-  display: flex;
-  justify-content: center;
-}
-
-article section:nth-child(even) > * {
-  width: 100%;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
 }
 
 article section:last-child {
