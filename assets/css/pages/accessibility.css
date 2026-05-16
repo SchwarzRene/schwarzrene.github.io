@@ -1,0 +1,128 @@
+/* ===================================================================
+   Accessibility Statement Page Styles
+   =================================================================== */
+
+/* Article Sections */
+article section {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-navy-mid);
+}
+
+article section:last-child {
+  border-bottom: none;
+}
+
+article section h2 {
+  color: var(--color-gold);
+  margin-top: var(--space-4);
+}
+
+article section h3 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+}
+
+/* Links in Content */
+article a {
+  color: var(--color-gold);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+article a:hover {
+  color: var(--color-gold-light);
+  text-decoration: none;
+}
+
+/* Highlighted Box (gold border) */
+.highlight-box {
+  background-color: var(--color-black-muted);
+  padding: var(--space-4);
+  border-left: 3px solid var(--color-gold);
+  margin: var(--space-4) 0;
+  border-radius: var(--radius-md);
+}
+
+/* Address Box (contact information) */
+.address-box {
+  background-color: var(--color-black-muted);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  margin: var(--space-4) 0;
+}
+
+.address-box p {
+  margin-bottom: var(--space-2);
+}
+
+.address-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer Meta */
+.statement-meta {
+  padding-top: var(--space-8);
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--color-navy);
+  font-size: var(--text-sm);
+  color: var(--color-gray-300);
+}
+
+.statement-meta p {
+  margin-bottom: var(--space-2);
+}
+
+/* Footer Metadata (update info) */
+.footer-metadata {
+  border-top: 1px solid var(--color-gray-400);
+  padding-top: var(--space-8);
+  margin-top: var(--space-8);
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+}
+
+.footer-metadata p {
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-400);
+}
+
+.footer-metadata strong {
+  font-weight: var(--weight-bold);
+}
+
+/* Code Block (for HTML examples) */
+code {
+  background-color: var(--color-black-soft);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  color: var(--color-gold);
+  font-size: var(--text-sm);
+}
+
+pre {
+  background-color: var(--color-black-soft);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  border-left: 4px solid var(--color-gold);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  article {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  article section {
+    padding: var(--space-6) 0;
+  }
+}

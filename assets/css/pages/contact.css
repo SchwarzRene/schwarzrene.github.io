@@ -1,0 +1,60 @@
+/* ===================================================================
+   Contact Page Specific Styles
+   =================================================================== */
+
+/* Form Styling */
+form fieldset {
+  margin-bottom: var(--space-8);
+}
+
+form legend {
+  margin-bottom: var(--space-4);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* Form Group Spacing */
+.form-group {
+  margin-bottom: var(--space-6);
+}
+
+.form-group:last-child {
+  margin-bottom: var(--space-4);
+}
+
+/* Input/Textarea Focus States */
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--color-black-muted);
+}
+
+/* Button Group */
+form button[type="submit"],
+form button[type="reset"] {
+  margin-right: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* Contact Section */
+article section[aria-labelledby="info-heading"] {
+  padding: var(--space-8) 0;
+}
+
+article address {
+  color: var(--color-gray-300);
+  font-style: normal;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  fieldset {
+    padding: var(--space-4);
+  }
+
+  form button[type="submit"],
+  form button[type="reset"] {
+    width: 100%;
+    margin-bottom: var(--space-2);
+  }
+}

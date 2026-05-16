@@ -1,0 +1,24 @@
+/* About Page Styles */
+
+article section {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-gray-400);
+}
+
+article section h2 {
+  color: var(--color-white);
+}
+
+article section:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  article {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  article section {
+    padding: var(--space-6) 0;
+  }
+}

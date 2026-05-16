@@ -1,0 +1,183 @@
+/* ===================================================================
+   Home Page Specific Styles - Improved Design
+   =================================================================== */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--color-black) 0%, rgba(26, 43, 74, 0.4) 100%);
+  padding: var(--space-24) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--text-hero);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero .lead {
+  font-size: var(--text-xl);
+  color: var(--color-gray-300);
+  margin-bottom: var(--space-12);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.hero .btn-primary {
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-8);
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-12);
+  margin: var(--space-8) 0;
+}
+
+.feature {
+  background-color: var(--color-black-muted);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-400);
+  border-left: 3px solid var(--color-gold);
+  transition: all var(--transition-normal);
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3 {
+  color: var(--color-white);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+  font-size: var(--text-lg);
+}
+
+.feature p {
+  color: var(--color-gray-300);
+  font-size: var(--text-sm);
+  line-height: var(--leading-loose);
+  margin-bottom: 0;
+}
+
+/* What We Do - Grid Layout with Video */
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+  margin-top: var(--space-8);
+}
+
+.what-we-do-text {
+  flex: 1;
+}
+
+.what-we-do-text h3 {
+  color: var(--color-white);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+  font-size: var(--text-xl);
+}
+
+.what-we-do-text ul {
+  margin-left: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.what-we-do-text li {
+  color: var(--color-gray-300);
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-loose);
+}
+
+.what-we-do-text strong {
+  color: var(--color-white);
+}
+
+/* Video as GIF - Smaller and Right-Aligned */
+.what-we-do-video {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: sticky;
+  top: var(--space-8);
+}
+
+.video-gif {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-black);
+  display: block;
+}
+
+/* Call to Action Buttons */
+.cta-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-16) 0;
+  }
+
+  .hero h1 {
+    font-size: var(--text-4xl);
+  }
+
+  .hero .lead {
+    font-size: var(--text-lg);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  /* What We Do - Stack on Mobile */
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .what-we-do-text {
+    order: 1;
+  }
+
+  .what-we-do-video {
+    order: 2;
+    justify-content: center;
+    position: static;
+  }
+
+  .video-gif {
+    max-width: 250px;
+  }
+}

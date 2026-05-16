@@ -1,0 +1,51 @@
+/* Impressum/Privacy Page Styles */
+
+article h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+}
+
+article section {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-gray-400);
+}
+
+article section h2 {
+  color: var(--color-white);
+}
+
+article section h3 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+article address {
+  font-style: normal;
+  background-color: var(--color-black-muted);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-gold);
+}
+
+article address p {
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-300);
+}
+
+article ul li {
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-300);
+}
+
+@media (max-width: 768px) {
+  article {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  article section {
+    padding: var(--space-6) 0;
+  }
+}

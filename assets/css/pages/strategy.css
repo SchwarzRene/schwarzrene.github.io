@@ -1,0 +1,51 @@
+/* Strategy Page Styles */
+
+article section {
+  padding: var(--space-8) 0;
+  border-bottom: none;
+  border-top: 2px solid var(--color-gold);
+  position: relative;
+}
+
+article section h2 {
+  color: var(--color-white);
+}
+
+article section ul li {
+  margin-bottom: var(--space-3);
+  color: var(--color-gray-300);
+}
+
+article section:first-child {
+  border-top: none;
+}
+
+article section:last-child {
+  border-bottom: none;
+}
+
+/* Alternating darker blue color scheme for strategy page */
+article section:nth-child(odd) {
+  background-color: #1A2B4A;
+}
+
+article section:nth-child(even) {
+  background-color: #0F1219;
+}
+
+/* Golden divider line effect */
+article section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+@media (max-width: 768px) {
+  article section {
+    padding: var(--space-6) 0;
+  }
+}

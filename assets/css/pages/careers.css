@@ -1,0 +1,33 @@
+/* Careers Page Styles */
+
+article section {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-gray-400);
+}
+
+article section h2 {
+  color: var(--color-white);
+}
+
+article section h3 {
+  color: var(--color-white);
+  font-size: var(--text-lg);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+article section ul li {
+  margin-bottom: var(--space-3);
+  color: var(--color-gray-300);
+}
+
+article section:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  article section {
+    padding: var(--space-6) 0;
+  }
+}
