@@ -1,8 +1,27 @@
 /* Careers Page Styles */
 
+.hero-title-with-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
 article section {
-  padding: var(--space-8) 0;
+  padding: var(--space-2) 0 var(--space-8) 0;
   border-bottom: 1px solid var(--color-gray-400);
+  position: relative;
+  border-top: 1px solid var(--color-gray-400);
+}
+
+article section .container-narrow {
+  width: 100%;
 }
 
 article section h2 {
@@ -26,7 +45,80 @@ article section:last-child {
   border-bottom: none;
 }
 
+/* Section layout with images left and right of content */
+.section-layout {
+  position: relative;
+}
+
+.section-content {
+  /* Text stays in normal position */
+}
+
+.image-left {
+  position: absolute;
+  left: -400px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(196, 168, 107, 0.15);
+}
+
+.image-right {
+  position: absolute;
+  right: -400px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(196, 168, 107, 0.15);
+}
+
+/* Page navigation with images */
+.page-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-12);
+  position: relative;
+  margin-top: var(--space-8);
+}
+
+.page-navigation > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 400px;
+}
+
+.image-nav-left {
+  position: absolute;
+  left: -400px;
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(196, 168, 107, 0.15);
+}
+
+.image-nav-right {
+  position: absolute;
+  right: -400px;
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(196, 168, 107, 0.15);
+}
+
 @media (max-width: 768px) {
+  article {
+    padding: var(--space-6) var(--space-4);
+  }
+
   article section {
     padding: var(--space-6) 0;
   }

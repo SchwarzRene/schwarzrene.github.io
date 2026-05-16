@@ -8,6 +8,16 @@ article section {
   border-bottom: 1px solid var(--color-navy-mid);
 }
 
+/* Centered Sections with Background */
+article section:nth-child(even) {
+  display: flex;
+  justify-content: center;
+}
+
+article section:nth-child(even) > * {
+  width: 100%;
+}
+
 article section:last-child {
   border-bottom: none;
 }

@@ -1,4 +1,83 @@
-/* About Page Styles */
+/* About Page with Background Trend Chart */
+
+/* Main with background trend chart */
+#main-content.main-with-chart {
+  position: relative;
+  background-image: url('/assets/images/trend.jpg');
+  background-attachment: fixed;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 110%;
+}
+
+/* Pseudo-element for right trend chart (trend.jpg) */
+#main-content.main-with-chart::before {
+  content: '';
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url('/assets/images/trend.jpg');
+  background-attachment: fixed;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 110%;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(-8px 8px 20px rgba(196, 168, 107, 0.3));
+}
+
+/* Pseudo-element for left trend chart (trend2.jpg) */
+#main-content.main-with-chart::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url('/assets/images/trend2.jpg');
+  background-attachment: fixed;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 110%;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(8px 8px 20px rgba(196, 168, 107, 0.3));
+}
+
+
+/* Header and Footer above the background image */
+header,
+#header-placeholder,
+footer,
+#footer-placeholder {
+  position: relative;
+  z-index: 100;
+}
+
+/* Hero Section */
+.hero-about {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-about h1 {
+  color: var(--color-white);
+}
+
+.hero-about .lead {
+  color: var(--color-gray-300);
+  max-width: 800px;
+  margin: var(--space-4) auto 0;
+}
+
+/* Article Sections - text visible over background */
+article {
+  position: relative;
+  z-index: 2;
+}
 
 article section {
   padding: var(--space-8) 0;
@@ -7,13 +86,62 @@ article section {
 
 article section h2 {
   color: var(--color-white);
+  margin-bottom: var(--space-4);
 }
 
 article section:last-child {
   border-bottom: none;
 }
 
+article section p,
+article section ul {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-gray-300);
+}
+
+/* Blue/Navy sections should be above the background image */
+article section:nth-child(even) {
+  background-color: rgba(26, 43, 74, 0.8);
+  position: relative;
+  z-index: 3;
+}
+
+/* Blue subsection for 2. Wort- und Bildmarke - same style as "Unser Team" */
+article section.brand-subsection-blue {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: var(--space-16) var(--space-4);
+  max-width: none;
+  background-color: rgba(26, 43, 74, 0.8);
+  position: relative;
+  z-index: 3;
+}
+
+article section.brand-subsection-blue > * {
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #main-content.main-with-chart::before {
+    width: 50%;
+    background-size: auto 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  #main-content.main-with-chart::before {
+    display: none;
+  }
+
+  #main-content.main-with-chart {
+    background-image: none;
+  }
+
   article {
     padding: var(--space-6) var(--space-4);
   }
