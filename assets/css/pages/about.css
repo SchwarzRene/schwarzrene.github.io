@@ -98,14 +98,23 @@ article p {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
   .about-image-side {
-    width: 40vw;
-    height: 100vh;
+    position: relative;
+    width: 100%;
+    height: auto;
+    order: 1;
+    margin-bottom: var(--space-6);
   }
 
   .about-text-side {
-    width: 60vw;
-    padding: var(--space-4);
+    width: 100%;
+    max-width: 100%;
+    padding: var(--space-6);
+    order: 2;
   }
 
   .brand-image {
@@ -115,19 +124,33 @@ article p {
 }
 
 @media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
   .about-image-side {
-    width: 35vw;
-    height: 100vh;
+    position: relative;
+    width: 100%;
+    height: auto;
+    order: 1;
+    margin-bottom: var(--space-4);
   }
 
   .about-text-side {
-    width: 65vw;
+    width: 100%;
+    max-width: 100%;
     padding: var(--space-4);
+    margin-left: 0;
+    order: 2;
   }
 
   .brand-image {
     width: 100%;
     height: auto;
+  }
+
+  article {
+    padding: var(--space-4);
   }
 
   article section {
@@ -146,13 +169,15 @@ article p {
 
 @media (max-width: 480px) {
   .about-image-side {
-    width: 30vw;
-    height: 100vh;
+    margin-bottom: var(--space-3);
   }
 
   .about-text-side {
-    width: 70vw;
-    padding: var(--space-6);
+    padding: var(--space-4);
+  }
+
+  article {
+    padding: var(--space-3);
   }
 
   article section {

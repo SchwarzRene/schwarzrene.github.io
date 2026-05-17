@@ -39,6 +39,7 @@ article section:last-child {
 article section h2 {
   color: var(--color-navy-light);
   margin-bottom: var(--space-4);
+  text-align: center;
 }
 
 article section h3 {
