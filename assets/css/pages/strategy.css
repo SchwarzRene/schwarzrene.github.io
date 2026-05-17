@@ -61,16 +61,16 @@ article section:nth-child(even) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: var(--radius-md);
-    opacity: 0.45;
-    box-shadow: 0 4px 16px rgba(196, 168, 107, 0.2);
+    opacity: 0.8;
+    box-shadow: 0 4px 16px rgba(196, 168, 107, 0.3);
   }
 
-  .section-img-left  { left:  var(--space-6); }
-  .section-img-right { right: var(--space-6); }
+  .section-img-left  { left:  3%; }
+  .section-img-right { right: 3%; }
 }
 
 /* Golden divider line effect */

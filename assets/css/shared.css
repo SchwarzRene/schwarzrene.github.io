@@ -670,6 +670,7 @@ header {
   .header-content {
     gap: var(--space-4);
     padding: var(--space-3) 0;
+    position: static;
   }
 
   .logo-link {
@@ -699,8 +700,8 @@ header {
   }
 
   .primary-nav {
-    position: fixed;
-    top: 70px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     width: 100%;
