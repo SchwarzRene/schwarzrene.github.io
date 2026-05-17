@@ -98,24 +98,14 @@ article p {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .about-layout {
-    flex-direction: column;
-  }
-
   .about-image-side {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-    margin-bottom: var(--space-6);
-    order: 1;
+    width: 40vw;
+    height: 100vh;
   }
 
   .about-text-side {
-    width: 100%;
-    max-width: 100%;
-    padding: var(--space-6);
-    order: 2;
+    width: 60vw;
+    padding: var(--space-4);
   }
 
   .brand-image {
@@ -125,31 +115,19 @@ article p {
 }
 
 @media (max-width: 768px) {
-  .about-layout {
-    flex-direction: column;
-  }
-
   .about-image-side {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    margin-bottom: var(--space-4);
+    width: 35vw;
+    height: 100vh;
   }
 
   .about-text-side {
-    width: 100%;
-    max-width: 100%;
+    width: 65vw;
     padding: var(--space-4);
-    margin-left: 0;
   }
 
   .brand-image {
     width: 100%;
     height: auto;
-  }
-
-  article {
-    padding: var(--space-4);
   }
 
   article section {
@@ -168,15 +146,13 @@ article p {
 
 @media (max-width: 480px) {
   .about-image-side {
-    min-height: 250px;
+    width: 30vw;
+    height: 100vh;
   }
 
   .about-text-side {
-    padding: var(--space-3);
-  }
-
-  article {
-    padding: var(--space-3);
+    width: 70vw;
+    padding: var(--space-6);
   }
 
   article section {
@@ -193,7 +169,7 @@ article p {
   }
 
   .brand-image {
-    width: 90%;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 }
