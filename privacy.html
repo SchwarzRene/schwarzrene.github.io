@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="/assets/css/shared.css">
   <link rel="stylesheet" href="/assets/css/pages/disclaimer.css">
   <link rel="icon" href="/assets/images/logo.png" type="image/png" />
+  <style>
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+    }
+    ul li::before {
+      content: "- ";
+    }
+    ul li,
+    ul li strong,
+    ul li a {
+      font-weight: inherit;
+      color: var(--color-gray-400, #9ca3af) !important;
+    }
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
@@ -151,11 +166,11 @@
           <h3>3.1 Kontaktformular-Verarbeitung</h3>
           <p>Ihre Kontaktformular-Daten werden für die folgenden Zwecke verwendet:</p>
           <ul>
-            <li><strong>Anfrage-Beantwortung:</strong> Um Ihre Frage oder Anfrage zu verstehen und Ihnen eine hilfreiche Antwort zu geben (rechtliche Grundlage: Berechtigtes Interesse oder Vorvertrag)</li>
-            <li><strong>Bewerbungsverarbeitung:</strong> Falls Sie sich bewerben, verwenden wir Ihre Daten zum Screening, Interview und Bewerbungsentscheidung (rechtliche Grundlage: Vertrag und berechtigtes Interesse für Recruiting)</li>
-            <li><strong>Transaktions-E-Mails:</strong> Um Ihnen Bestätigungen, Updates und wichtige Service-Mitteilungen zu versenden (rechtliche Grundlage: Vertrag)</li>
-            <li><strong>Antispam-Verifikation:</strong> Um sicherzustellen, dass das Formular von einer echten Person und nicht von einem Bot eingereicht wird (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
-            <li><strong>Sicherheitsüberwachung:</strong> Um verdächtige Aktivitäten oder Missbrauchsmuster zu erkennen (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
+            <li>Anfrage-Beantwortung: Um Ihre Frage oder Anfrage zu verstehen und Ihnen eine hilfreiche Antwort zu geben (rechtliche Grundlage: Berechtigtes Interesse oder Vorvertrag)</li>
+            <li>Bewerbungsverarbeitung: Falls Sie sich bewerben, verwenden wir Ihre Daten zum Screening, Interview und Bewerbungsentscheidung (rechtliche Grundlage: Vertrag und berechtigtes Interesse für Recruiting)</li>
+            <li>Transaktions-E-Mails: Um Ihnen Bestätigungen, Updates und wichtige Service-Mitteilungen zu versenden (rechtliche Grundlage: Vertrag)</li>
+            <li>Antispam-Verifikation: Um sicherzustellen, dass das Formular von einer echten Person und nicht von einem Bot eingereicht wird (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
+            <li>Sicherheitsüberwachung: Um verdächtige Aktivitäten oder Missbrauchsmuster zu erkennen (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
           </ul>
           <p>
             Ihre Daten werden bis 30 Tage nach Beantwortung Ihrer Anfrage gespeichert. Falls Sie eine aktive Bewerbung oder ein aktives Abonnement haben, werden die Daten länger aufbewahrt gemäß den jeweiligen Aufbewahrungsrichtlinien in Abschnitt 7.
@@ -164,30 +179,30 @@
           <h3>3.2 Abonnement-Verarbeitung und Kundenbeziehung</h3>
           <p>Abonnement-Daten werden für diese Zwecke verwendet:</p>
           <ul>
-            <li><strong>Vertragserfüllung:</strong> Um monatliche Abrechnung, Abonnementverlängerungen und automatische Zahlungen zu verarbeiten (rechtliche Grundlage: Vertrag)</li>
-            <li><strong>Service-Bereitstellung:</strong> Um Ihnen Zugriff auf den Handelsalgorithmus, API-Zugang und alle abonnierten Services bereitzustellen (rechtliche Grundlage: Vertrag)</li>
-            <li><strong>Kontosicherheit:</strong> Um Ihr Konto zu schützen, verdächtige Anmeldeversuche zu erkennen, Zwei-Faktor-Authentifizierung durchzuführen (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
-            <li><strong>Betrugserkennung:</strong> Um betrügerische Zahlungen, Kontoübernahmen oder Missbrauch zu verhindern (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
-            <li><strong>Rechnungen und Quittungen:</strong> Um offizielle Rechnungen zu versenden, Zahlungsbelege bereitzustellen, Abonnementdetails zu dokumentieren (rechtliche Grundlage: Vertrag und gesetzliche Verpflichtung für Buchhaltung)</li>
-            <li><strong>Service-Updates und Support:</strong> Um wichtige Aktualisierungen, Wartungsmitteilungen und Kundensupport bereitzustellen (rechtliche Grundlage: Vertrag)</li>
-            <li><strong>Konto-Verwaltung:</strong> Um Ihr Profil zu aktualisieren, Passwort-Zurücksetzer zu verwalten, Kontoinformationen zu korrigieren (rechtliche Grundlage: Vertrag)</li>
+            <li>Vertragserfüllung: Um monatliche Abrechnung, Abonnementverlängerungen und automatische Zahlungen zu verarbeiten (rechtliche Grundlage: Vertrag)</li>
+            <li>Service-Bereitstellung: Um Ihnen Zugriff auf den Handelsalgorithmus, API-Zugang und alle abonnierten Services bereitzustellen (rechtliche Grundlage: Vertrag)</li>
+            <li>Kontosicherheit: Um Ihr Konto zu schützen, verdächtige Anmeldeversuche zu erkennen, Zwei-Faktor-Authentifizierung durchzuführen (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
+            <li>Betrugserkennung: Um betrügerische Zahlungen, Kontoübernahmen oder Missbrauch zu verhindern (rechtliche Grundlage: Berechtigtes Interesse für Sicherheit)</li>
+            <li>Rechnungen und Quittungen: Um offizielle Rechnungen zu versenden, Zahlungsbelege bereitzustellen, Abonnementdetails zu dokumentieren (rechtliche Grundlage: Vertrag und gesetzliche Verpflichtung für Buchhaltung)</li>
+            <li>Service-Updates und Support: Um wichtige Aktualisierungen, Wartungsmitteilungen und Kundensupport bereitzustellen (rechtliche Grundlage: Vertrag)</li>
+            <li>Konto-Verwaltung: Um Ihr Profil zu aktualisieren, Passwort-Zurücksetzer zu verwalten, Kontoinformationen zu korrigieren (rechtliche Grundlage: Vertrag)</li>
           </ul>
 
           <h3>3.3 Website-Analytik und Cookies</h3>
           <p>Wir verwenden verschiedene technische Instrumente zur Datenerfassung:</p>
           <ul>
-            <li><strong>Session-Cookies (technisch erforderlich):</strong> Kleine Dateien, die Ihrem Browser speichern, um Formularfunktionalität, Sicherheitssitzungen und Website-Stabilität aufrechtzuerhalten. (keine explizite Zustimmung erforderlich)</li>
-            <li><strong>Präferenz-Cookies (optional):</strong> Um Ihre Design-, Sprach- und Navigationspräferenzen zu speichern. Diese Cookies können bis zu 12 Monate bestehen bleiben.</li>
-            <li><strong>Analyse-Cookies (mit Opt-in):</strong> Falls wir Analytics implementieren, verwenden wir nur datenschutzorientierte Tools und KEINE invasiven Tracker wie Google Analytics (explizite Zustimmung erforderlich).</li>
-            <li><strong>Marketing/Werbe-Cookies (NICHT verwendet):</strong> Wir verwenden KEINE Cookies für Werbezwecke, Tracking über Websites hinweg oder Profiling.</li>
+            <li>Session-Cookies (technisch erforderlich): Kleine Dateien, die Ihrem Browser speichern, um Formularfunktionalität, Sicherheitssitzungen und Website-Stabilität aufrechtzuerhalten. (keine explizite Zustimmung erforderlich)</li>
+            <li>Präferenz-Cookies (optional): Um Ihre Design-, Sprach- und Navigationspräferenzen zu speichern. Diese Cookies können bis zu 12 Monate bestehen bleiben.</li>
+            <li>Analyse-Cookies (mit Opt-in): Falls wir Analytics implementieren, verwenden wir nur datenschutzorientierte Tools und KEINE invasiven Tracker wie Google Analytics (explizite Zustimmung erforderlich).</li>
+            <li>Marketing/Werbe-Cookies (NICHT verwendet): Wir verwenden KEINE Cookies für Werbezwecke, Tracking über Websites hinweg oder Profiling.</li>
           </ul>
 
           <h3>3.4 Rechtliche Compliance und behördliche Anforderungen</h3>
           <p>Daten werden für die folgenden Compliance-Zwecke verwendet:</p>
           <ul>
-            <li><strong>Steuerzwecke:</strong> Rechnungen und Transaktionsdaten werden gemäß österreichischen Steuergesetzen (Aufbewahrung für 7 Jahre) aufbewahrt.</li>
-            <li><strong>Behördliche Anforderungen:</strong> Ihre Daten werden offengelegt, falls gesetzlich erforderlich oder zur Einhaltung von behördlichen Anordnungen.</li>
-            <li><strong>Betrugsbekämpfung:</strong> Zur Erkennung und Verhinderung von Betrug, Geldwäsche oder Terrorismusfinanzierung.</li>
+            <li>Steuerzwecke: Rechnungen und Transaktionsdaten werden gemäß österreichischen Steuergesetzen (Aufbewahrung für 7 Jahre) aufbewahrt.</li>
+            <li>Behördliche Anforderungen: Ihre Daten werden offengelegt, falls gesetzlich erforderlich oder zur Einhaltung von behördlichen Anordnungen.</li>
+            <li>Betrugsbekämpfung: Zur Erkennung und Verhinderung von Betrug, Geldwäsche oder Terrorismusfinanzierung.</li>
           </ul>
         </div>
       </section>
@@ -243,11 +258,11 @@
           <h3>5.1 Technische Sicherheitsmassnahmen</h3>
           <p>Wir implementieren umfassende Sicherheitsmaßnahmen nach Industriestandards:</p>
           <ul>
-            <li><strong>HTTPS/SSL-Verschlüsselung:</strong> Datenübertragungen erfolgen über TLS 1.2+</li>
-            <li><strong>Datenverschlüsselung im Ruhezustand:</strong> Sensitive Daten werden mit AES-256 verschlüsselt</li>
-            <li><strong>Zugangskontrollen:</strong> Nur autorisiertes Personal hat Zugriff; Zugriffe werden protokolliert</li>
-            <li><strong>Zwei-Faktor-Authentifizierung (2FA):</strong> Verfügbar und empfohlen für alle Abonnements</li>
-            <li><strong>Rate Limiting:</strong> Schutz vor Brute-Force-Angriffen durch Begrenzung von Anmeldeversuchen</li>
+            <li>HTTPS/SSL-Verschlüsselung: Datenübertragungen erfolgen über TLS 1.2+</li>
+            <li>Datenverschlüsselung im Ruhezustand: Sensitive Daten werden mit AES-256 verschlüsselt</li>
+            <li>Zugangskontrollen: Nur autorisiertes Personal hat Zugriff; Zugriffe werden protokolliert</li>
+            <li>Zwei-Faktor-Authentifizierung (2FA): Verfügbar und empfohlen für alle Abonnements</li>
+            <li>Rate Limiting: Schutz vor Brute-Force-Angriffen durch Begrenzung von Anmeldeversuchen</li>
           </ul>
 
           <h3>5.2 Ihre persönliche Verantwortung</h3>
@@ -316,11 +331,11 @@
 
           <h3>7.1 Aufbewahrungsfristen nach Datentyp</h3>
           <ul>
-            <li><strong>Kontaktformular-Einreichungen:</strong> 30 Tage nach Beantwortung</li>
-            <li><strong>Bewerbungsdaten:</strong> 6 Monate nach Bewerbung</li>
-            <li><strong>Abonnementdaten:</strong> Während der Mitgliedschaft, danach noch 30 Tage</li>
-            <li><strong>Rechnungen und Transaktionsdaten:</strong> 7 Jahre (österreichische Steueranforderung)</li>
-            <li><strong>Website-Server-Logs:</strong> 30 Tage (Sicherheit)</li>
+            <li>Kontaktformular-Einreichungen: 30 Tage nach Beantwortung</li>
+            <li>Bewerbungsdaten: 6 Monate nach Bewerbung</li>
+            <li>Abonnementdaten: Während der Mitgliedschaft, danach noch 30 Tage</li>
+            <li>Rechnungen und Transaktionsdaten: 7 Jahre (österreichische Steueranforderung)</li>
+            <li>Website-Server-Logs: 30 Tage (Sicherheit)</li>
           </ul>
 
           <h3>7.2 Automatische Löschung</h3>
@@ -341,9 +356,9 @@
 
           <h3>8.2 Arten von Cookies und deren Zweck</h3>
           <ul>
-            <li><strong>Technisch erforderliche Cookies:</strong> Für Formularübermittlung, Sicherheit, Login-Sessions. Keine explizite Zustimmung erforderlich.</li>
-            <li><strong>Präferenz-Cookies:</strong> Speichern Einstellungen wie Design (Hell/Dunkel). (Erfordern Zustimmung über unseren Cookie-Banner).</li>
-            <li><strong>Marketing-Cookies:</strong> WERDEN NICHT VERWENDET. Wir schalten keine Retargeting-Werbung.</li>
+            <li>Technisch erforderliche Cookies: Für Formularübermittlung, Sicherheit, Login-Sessions. Keine explizite Zustimmung erforderlich.</li>
+            <li>Präferenz-Cookies: Speichern Einstellungen wie Design (Hell/Dunkel). (Erfordern Zustimmung über unseren Cookie-Banner).</li>
+            <li>Marketing-Cookies: WERDEN NICHT VERWENDET. Wir schalten keine Retargeting-Werbung.</li>
           </ul>
 
           <h3>8.3 Verwaltung von Cookies</h3>
@@ -410,10 +425,10 @@
 
           <h3>13.3 Weitere Kontaktmöglichkeiten</h3>
           <ul>
-            <li><strong>Allgemeine Anfragen:</strong> <a href="mailto:info@blackquantempire.at">info@blackquantempire.at</a></li>
-            <li><strong>Technischer Support:</strong> <a href="mailto:support@blackquantempire.at">support@blackquantempire.at</a></li>
-            <li><strong>Geschäftliche Anfragen:</strong> <a href="mailto:business@blackquantempire.at">business@blackquantempire.at</a></li>
-            <li><strong>Sicherheitsmitteilungen:</strong> <a href="mailto:security@blackquantempire.at">security@blackquantempire.at</a></li>
+            <li>Allgemeine Anfragen: <a href="mailto:info@blackquantempire.at">info@blackquantempire.at</a></li>
+            <li>Technischer Support: <a href="mailto:support@blackquantempire.at">support@blackquantempire.at</a></li>
+            <li>Geschäftliche Anfragen: <a href="mailto:business@blackquantempire.at">business@blackquantempire.at</a></li>
+            <li>Sicherheitsmitteilungen: <a href="mailto:security@blackquantempire.at">security@blackquantempire.at</a></li>
           </ul>
         </div>
       </section>
@@ -438,92 +453,6 @@
 
   <div id="footer-placeholder"></div>
 
-  <!-- DSGVO COOKIE CONSENT BANNER -->
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Zustimmung" hidden>
-    <div class="cookie-content container">
-      <div class="cookie-text">
-        <h3 style="margin-top: 0; color: white;">Wir verwenden Cookies</h3>
-        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #e2e8f0; margin-bottom: 0;">
-          Wir nutzen technisch notwendige Cookies, um die Funktion der Website sicherzustellen. Optional setzen wir Präferenz-Cookies ein (Speicherdauer 12 Monate), um Ihr Nutzererlebnis zu optimieren. Bevor diese gesetzt werden, benötigen wir Ihre Zustimmung gemäß DSGVO/ePrivacy.
-        </p>
-      </div>
-      <div class="cookie-buttons">
-        <button id="accept-cookies" class="btn btn-primary" style="white-space: nowrap;">Alle akzeptieren</button>
-        <button id="reject-cookies" class="btn btn-secondary" style="white-space: nowrap;">Nur Notwendige</button>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #1A2B4A; /* Navy-Blue */
-      color: white;
-      padding: 1.5rem 0;
-      z-index: 9999;
-      box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
-      border-top: 2px solid #C4A86B; /* Gold */
-    }
-    .cookie-content {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .cookie-buttons {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-    @media(min-width: 768px) {
-      .cookie-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .cookie-text {
-        max-width: 70%;
-      }
-    }
-  </style>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const cookieBanner = document.getElementById("cookie-banner");
-      const btnAccept = document.getElementById("accept-cookies");
-      const btnReject = document.getElementById("reject-cookies");
-      
-      // Prüfen, ob der User bereits eine Auswahl getroffen hat
-      if (!localStorage.getItem("bqe_cookie_consent")) {
-        // Falls nein: Banner anzeigen
-        cookieBanner.removeAttribute("hidden");
-      } else if (localStorage.getItem("bqe_cookie_consent") === "accepted") {
-        // Falls bereits akzeptiert: Präferenz-Cookies laden
-        enablePreferenceCookies();
-      }
-      
-      // Klick auf "Akzeptieren"
-      btnAccept.addEventListener("click", function() {
-        localStorage.setItem("bqe_cookie_consent", "accepted");
-        enablePreferenceCookies();
-        cookieBanner.setAttribute("hidden", "true");
-      });
-      
-      // Klick auf "Nur Notwendige" (Ablehnen)
-      btnReject.addEventListener("click", function() {
-        localStorage.setItem("bqe_cookie_consent", "rejected");
-        cookieBanner.setAttribute("hidden", "true");
-      });
-
-      function enablePreferenceCookies() {
-        console.log("Präferenz-Cookies sind nun aktiviert.");
-        // Hier können bei Bedarf zusätzliche Scripte für Preferences gestartet werden
-      }
-    });
-  </script>
-  <!-- ENDE COOKIE BANNER -->
 
   <script src="/assets/js/components.js"></script>
   <script src="/assets/js/navigation.js"></script>

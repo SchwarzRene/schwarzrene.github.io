@@ -65,3 +65,52 @@ function setActiveNavLink() {
     }
   });
 }
+
+// --- Cookie Logik ---
+
+// Funktion zum Setzen eines Cookies
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Funktion zum Auslesen eines Cookies
+function getCookie(name) {
+  let nameEQ = name + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Initialisierung des Banners
+document.addEventListener('DOMContentLoaded', () => {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
+
+  if (cookieBanner && acceptButton) {
+    // Wenn das Cookie "bqe_cookie_consent" nicht existiert, zeige den Banner
+    if (!getCookie('bqe_cookie_consent')) {
+      cookieBanner.style.display = 'block';
+    }
+
+    // Wenn auf Akzeptieren geklickt wird
+    acceptButton.addEventListener('click', () => {
+      // Setze das Cookie für 365 Tage
+      setCookie('bqe_cookie_consent', 'accepted', 365);
+      // Verstecke den Banner
+      cookieBanner.style.display = 'none';
+      
+      // Hier könntest du dann deine Tracking-Skripte starten (z.B. Google Analytics)
+      console.log("Cookies wurden akzeptiert!");
+    });
+  }
+});
