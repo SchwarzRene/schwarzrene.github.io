@@ -4,7 +4,6 @@
 
 /* Contact Hero with Background Image */
 .contact-hero {
-  border-bottom: none;
   background-image: url('/assets/images/apply.jpg');
   background-size: cover;
   background-position: center top;
