@@ -328,6 +328,7 @@ header {
 
 .header-top {
   width: 100%;
+  position: relative;
 }
 
 .header-content {
@@ -336,6 +337,7 @@ header {
   align-items: center;
   padding: var(--space-4) 0;
   gap: var(--space-8);
+  position: relative;
 }
 
 /* Logo Section */
