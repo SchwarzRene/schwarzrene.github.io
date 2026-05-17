@@ -149,6 +149,24 @@ function clearAllFieldErrors(form) {
 /**
  * Submit form (mocked - in real app, would send to backend)
  */
+function playSuccessSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    [[440, 0, 0.15], [660, 0.18, 0.15]].forEach(([freq, start, duration]) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = freq;
+      osc.type = 'sine';
+      gain.gain.setValueAtTime(0.18, ctx.currentTime + start);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + start + duration);
+      osc.start(ctx.currentTime + start);
+      osc.stop(ctx.currentTime + start + duration);
+    });
+  } catch (_) {}
+}
+
 function submitForm(form, formData) {
   const formStatus = document.getElementById('form-status');
   const errorSummary = document.getElementById('error-summary');
@@ -172,6 +190,7 @@ function submitForm(form, formData) {
         </p>
       </div>
     `;
+    playSuccessSound();
     formStatus.hidden = false;
     formStatus.scrollIntoView({ behavior: 'smooth' });
 
