@@ -8,9 +8,28 @@
   color: var(--color-gray-300);
 }
 
+article {
+  padding: 0;
+}
+
 article section {
-  padding: var(--space-8) 0;
+  padding: var(--space-8) var(--space-6);
   border-bottom: 1px solid var(--color-gray-400);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  article section {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  article section {
+    padding: var(--space-4) var(--space-4);
+  }
 }
 
 article section:last-child {
@@ -28,6 +47,12 @@ article section h3 {
   margin-top: var(--space-4);
   margin-bottom: var(--space-2);
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  article section h3 {
+    font-size: var(--text-base);
+  }
 }
 
 article p {

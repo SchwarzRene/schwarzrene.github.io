@@ -1,10 +1,25 @@
 /* Strategy Page Styles */
 
 article section {
-  padding: var(--space-8) 0;
+  padding: var(--space-8) var(--space-6);
   border-bottom: none;
   border-top: 2px solid var(--color-gold);
   position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  article section {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  article section {
+    padding: var(--space-4) var(--space-4);
+  }
 }
 
 article section h2 {
@@ -42,10 +57,4 @@ article section::before {
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-}
-
-@media (max-width: 768px) {
-  article section {
-    padding: var(--space-6) 0;
-  }
 }
