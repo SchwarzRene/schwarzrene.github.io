@@ -1,49 +1,47 @@
-/* Trading Disclaimer Page Styles */
+/* Medienquellen und Lizenzen Page Styles */
 
-article h1 {
+.hero h1 {
   color: var(--color-white);
-  margin-bottom: var(--space-2);
 }
 
-article .lead {
-  background-color: var(--color-black-muted);
-  border-left: 3px solid var(--color-error);
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
-  color: var(--color-white);
-  margin-bottom: var(--space-8);
+.hero .lead {
+  color: var(--color-gray-300);
 }
 
 article section {
   padding: var(--space-8) 0;
   border-bottom: 1px solid var(--color-gray-400);
-  position: relative;
 }
 
-article section .container {
-  width: 100%;
+article section:last-child {
+  border-bottom: none;
 }
 
 article section h2 {
-  color: var(--color-white);
+  color: var(--color-navy-light);
+  margin-bottom: var(--space-4);
 }
 
 article section h3 {
-  color: var(--color-white);
+  color: var(--color-navy-light);
   font-size: var(--text-lg);
   margin-top: var(--space-4);
   margin-bottom: var(--space-2);
   font-weight: 600;
 }
 
-article ul li {
-  margin-bottom: var(--space-2);
+article p {
   color: var(--color-gray-300);
 }
 
 article address {
   font-style: normal;
   color: var(--color-gray-300);
+}
+
+/* Accessibility heading classes */
+.accessibility-heading-blue {
+  color: var(--color-navy-light) !important;
 }
 
 footer.mt-12 {
@@ -91,5 +89,11 @@ footer.mt-12 {
 
   article section {
     padding: var(--space-6) 0;
+  }
+
+  /* Hide decorative images on mobile - they were positioned at -400px making them invisible */
+  .image-left,
+  .image-right {
+    display: none;
   }
 }

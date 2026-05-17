@@ -24,9 +24,6 @@ article section .container-narrow {
   width: 100%;
 }
 
-article section h2 {
-  color: var(--color-white);
-}
 
 article section h3 {
   color: var(--color-white);
@@ -121,5 +118,24 @@ article section:last-child {
 
   article section {
     padding: var(--space-6) 0;
+  }
+
+  /* Hide decorative images on mobile - they were positioned at -400px making them invisible */
+  .image-left,
+  .image-right,
+  .image-nav-left,
+  .image-nav-right {
+    display: none;
+  }
+
+  /* Remove min-width constraint on page navigation to prevent overflow */
+  .page-navigation > div {
+    min-width: auto;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .page-navigation {
+    gap: var(--space-4);
   }
 }

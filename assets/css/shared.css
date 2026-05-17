@@ -22,6 +22,7 @@
   /* Tertiary: Navy Blue */
   --color-navy: #1A2B4A;
   --color-navy-mid: #243660;
+  --color-navy-light: #5B8AC5;
 
   /* Neutral */
   --color-white: #FFFFFF;
@@ -333,17 +334,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-4) var(--space-4);
+  padding: var(--space-4) 0;
   gap: var(--space-8);
 }
 
 /* Logo Section */
 .logo-link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-decoration: none;
   flex-shrink: 0;
   transition: transform var(--transition-fast);
+  padding-left: var(--space-4);
+  gap: var(--space-3);
 }
 
 .logo-link:hover {
@@ -396,6 +399,7 @@ header {
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-list {
@@ -455,6 +459,152 @@ header {
   box-shadow: 0 4px 12px rgba(196, 168, 107, 0.2);
 }
 
+/* Login Button */
+.login-button {
+  background-color: var(--color-navy-mid);
+  color: var(--color-white);
+  border: 1px solid var(--color-navy-mid);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--text-base);
+  display: none;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.login-button:hover {
+  background-color: rgba(26, 43, 74, 0.8);
+  border-color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(26, 43, 74, 0.3);
+}
+
+.login-button:active {
+  background-color: var(--color-navy-mid);
+}
+
+@media (min-width: 769px) {
+  .login-button {
+    display: block;
+  }
+}
+
+/* Login Modal */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.login-modal[hidden] {
+  display: none !important;
+}
+
+.login-modal-content {
+  background-color: var(--color-black-muted);
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-400);
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.login-modal-content h2 {
+  color: var(--color-white);
+  margin-top: 0;
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.login-modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-modal-close:hover {
+  color: var(--color-gold);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.login-form-group label {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: var(--text-base);
+}
+
+.login-form-group input {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-gray-400);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  transition: all var(--transition-fast);
+}
+
+.login-form-group input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background-color: var(--color-black-soft);
+  box-shadow: 0 0 0 2px rgba(196, 168, 107, 0.2);
+}
+
+.login-submit {
+  background-color: var(--color-navy-mid);
+  color: var(--color-white);
+  border: 1px solid var(--color-navy-mid);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: var(--text-base);
+  transition: all var(--transition-fast);
+}
+
+.login-submit:hover {
+  background-color: rgba(26, 43, 74, 0.8);
+  border-color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(26, 43, 74, 0.3);
+}
+
+.login-submit:active {
+  background-color: var(--color-navy-mid);
+}
+
 /* Mobile Menu Toggle Button */
 .nav-toggle {
   display: none;
@@ -488,7 +638,11 @@ header {
 @media (max-width: 768px) {
   .header-content {
     gap: var(--space-4);
-    padding: var(--space-3);
+    padding: var(--space-3) 0;
+  }
+
+  .logo-link {
+    padding-left: var(--space-3);
   }
 
   .logo-group {

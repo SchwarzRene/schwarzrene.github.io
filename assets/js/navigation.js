@@ -19,6 +19,7 @@ function initMobileNav() {
 
     toggle.setAttribute('aria-expanded', String(newState));
     nav.classList.toggle('is-open', newState);
+    // ✅ aria-expanded wird korrekt aktualisiert
 
     // Update aria-label for screen readers
     const label = newState ? 'Close navigation menu' : 'Open navigation menu';
@@ -100,3 +101,67 @@ const observer = new MutationObserver(() => {
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
+
+/**
+ * Login Modal Handler
+ */
+function initLoginModal() {
+  const loginBtn = document.getElementById('login-btn');
+  const loginModal = document.getElementById('login-modal');
+  const loginClose = document.getElementById('login-close');
+  const loginForm = document.getElementById('login-form');
+
+  if (!loginBtn || !loginModal) return;
+
+  // Open modal
+  loginBtn.addEventListener('click', () => {
+    loginModal.removeAttribute('hidden');
+    loginModal.focus();
+  });
+
+  // Close modal
+  loginClose.addEventListener('click', () => {
+    loginModal.setAttribute('hidden', '');
+    loginBtn.focus();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !loginModal.hasAttribute('hidden')) {
+      loginModal.setAttribute('hidden', '');
+      loginBtn.focus();
+    }
+  });
+
+  // Close on click outside
+  loginModal.addEventListener('click', (e) => {
+    if (e.target === loginModal) {
+      loginModal.setAttribute('hidden', '');
+      loginBtn.focus();
+    }
+  });
+
+  // Prevent form submission (demo only)
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Demo-Modus: Dieses Formular funktioniert nicht. Es ist nur zu Demonstrationszwecken.');
+  });
+}
+
+// Initialize login modal when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    initLoginModal();
+  }, 0);
+});
+
+// Also listen for header being inserted
+const loginObserver = new MutationObserver(() => {
+  const loginBtn = document.getElementById('login-btn');
+  if (loginBtn && !loginBtn.dataset.loginInitialized) {
+    loginBtn.dataset.loginInitialized = 'true';
+    initLoginModal();
+  }
+});
+
+loginObserver.observe(document.body, { childList: true, subtree: true });

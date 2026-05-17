@@ -79,6 +79,11 @@ article address {
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Change background-attachment to scroll on mobile for better performance */
+  .contact-form-section {
+    background-attachment: scroll;
+  }
+
   fieldset {
     padding: var(--space-4);
   }

@@ -18,6 +18,15 @@
         </div>
       </a>
 
+      <!-- Login Button -->
+      <button
+        id="login-btn"
+        class="login-button"
+        aria-label="Login öffnen"
+      >
+        Login
+      </button>
+
       <!-- Mobile Menu Toggle Button -->
       <button
         class="nav-toggle"
@@ -45,6 +54,37 @@
           <li class="nav-item"><a href="/contact.html" class="nav-link nav-cta">Kontakt</a></li>
         </ul>
       </nav>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="login-modal" hidden>
+    <div class="login-modal-content">
+      <button id="login-close" class="login-modal-close" aria-label="Login schließen">&times;</button>
+      <h2>Login</h2>
+      <form id="login-form" class="login-form">
+        <div class="login-form-group">
+          <label for="username">Benutzername</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Benutzername eingeben"
+            required
+          />
+        </div>
+        <div class="login-form-group">
+          <label for="password">Passwort</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Passwort eingeben"
+            required
+          />
+        </div>
+        <button type="submit" class="login-submit">Anmelden</button>
+      </form>
     </div>
   </div>
 </header>
