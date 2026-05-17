@@ -1,18 +1,26 @@
 /* About Page - Brand Identity Documentation */
 
-
-/* Two Column Layout */
+/* ── Desktop: Two-column sticky layout ─────────────────────────────── */
 .about-layout {
   display: flex;
   width: 100%;
+  align-items: flex-start;
 }
 
-/* Left Side: Text Content */
 .about-text-side {
   order: 1;
+  flex: 1;
+  width: 50vw;
+  max-width: 50vw;
+  padding: var(--space-8);
+  overflow-x: hidden;
 }
 
-/* Right Side: Sticky Image */
+/* override container-narrow on desktop so it stays at 50vw */
+.about-text-side.container-narrow {
+  max-width: 50vw;
+}
+
 .about-image-side {
   position: sticky;
   top: 0;
@@ -21,52 +29,27 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  overflow: hidden;
   flex-shrink: 0;
   order: 2;
   background-color: #04111B;
   padding: 0;
+  overflow: hidden;
 }
 
 .image-container {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  max-width: 100%;
   width: 100%;
-  position: relative;
+  height: 100%;
 }
 
-/* Gradient overlays removed - keeping clean design */
-
-/* Text Side: Scrollable Content */
-.about-text-side {
-  flex: 1;
-  width: 50vw;
-  padding: var(--space-8);
-  max-width: 50vw;
-  overflow-x: hidden;
-}
-
-.about-text-side.container-narrow {
-  max-width: 50vw;
-}
-
-/* Brand Image */
 .brand-image {
   width: 50vw;
   height: auto;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
   display: block;
-  position: relative;
-  z-index: 1;
 }
 
-/* Article Sections */
+/* ── Article sections ──────────────────────────────────────────────── */
 article section {
-  padding: var(--space-8) 0;
+  padding: var(--space-8) var(--space-4);
   border-bottom: 1px solid var(--color-gray-400);
 }
 
@@ -91,70 +74,43 @@ article p {
   color: var(--color-gray-300);
 }
 
-/* Accessibility heading classes */
 .accessibility-heading-blue {
   color: var(--color-navy-light) !important;
 }
 
-/* Responsive Design */
+/* ── Mobile: single column, image on top ──────────────────────────── */
 @media (max-width: 1024px) {
   .about-layout {
     flex-direction: column;
   }
 
+  /* image first */
   .about-image-side {
     position: relative;
     width: 100%;
     height: auto;
     order: 1;
-    margin-bottom: var(--space-6);
-  }
-
-  .about-text-side {
-    width: 100%;
-    max-width: 100%;
-    padding: var(--space-6);
-    order: 2;
+    overflow: visible;
   }
 
   .brand-image {
     width: 100%;
-    height: auto;
+  }
+
+  /* text below, full width */
+  .about-text-side,
+  .about-text-side.container-narrow {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    padding: var(--space-6) var(--space-4);
   }
 }
 
 @media (max-width: 768px) {
-  .about-layout {
-    flex-direction: column;
-  }
-
-  .about-image-side {
-    position: relative;
-    width: 100%;
-    height: auto;
-    order: 1;
-    margin-bottom: var(--space-4);
-  }
-
-  .about-text-side {
-    width: 100%;
-    max-width: 100%;
-    padding: var(--space-4);
-    margin-left: 0;
-    order: 2;
-  }
-
-  .brand-image {
-    width: 100%;
-    height: auto;
-  }
-
-  article {
-    padding: var(--space-4);
-  }
-
-  article section {
-    padding: var(--space-4) 0;
+  .about-text-side,
+  .about-text-side.container-narrow {
+    padding: var(--space-4) var(--space-4);
   }
 
   article section h2 {
@@ -168,33 +124,16 @@ article p {
 }
 
 @media (max-width: 480px) {
-  .about-image-side {
-    margin-bottom: var(--space-3);
-  }
-
-  .about-text-side {
+  .about-text-side,
+  .about-text-side.container-narrow {
     padding: var(--space-4);
-  }
-
-  article {
-    padding: var(--space-3);
-  }
-
-  article section {
-    padding: var(--space-3) 0;
   }
 
   article section h2 {
     font-size: var(--text-lg);
-    margin-bottom: var(--space-3);
   }
 
   article section p {
     font-size: 14px;
-  }
-
-  .brand-image {
-    width: 100%;
-    height: auto;
   }
 }

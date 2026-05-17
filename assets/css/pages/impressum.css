@@ -46,6 +46,6 @@ article ul li {
   }
 
   article section {
-    padding: var(--space-6) 0;
+    padding: var(--space-6) var(--space-4);
   }
 }

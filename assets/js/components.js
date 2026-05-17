@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadComponent('footer-placeholder', '/components/footer.html'),
   ]);
 
-  // After components are loaded, initialize navigation and set active link
+  // After components are loaded, set active nav link
+  // (initMobileNav is handled by MutationObserver in navigation.js)
   setTimeout(() => {
     setActiveNavLink();
-    initMobileNav();
   }, 0);
 
   // Update year in footer

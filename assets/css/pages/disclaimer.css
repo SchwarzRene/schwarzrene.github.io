@@ -114,7 +114,7 @@ footer.mt-12 {
   }
 
   article section {
-    padding: var(--space-6) 0;
+    padding: var(--space-6) var(--space-4);
   }
 
   /* Hide decorative images on mobile - they were positioned at -400px making them invisible */
