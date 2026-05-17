@@ -1,5 +1,72 @@
 /* Careers Page Styles */
 
+/* Careers Hero with Background Image */
+.careers-hero {
+  background-image: url('/assets/images/jobs.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navy Blue Overlay - Increased opacity for better text contrast */
+.careers-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.7);
+  z-index: 1;
+}
+
+.careers-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .careers-hero {
+    min-height: 300px;
+    background-attachment: scroll;
+  }
+
+  .hero-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-hero {
+    min-height: 200px;
+  }
+
+  .hero-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  article section {
+    padding: var(--space-4) 0;
+  }
+
+  article section h2 {
+    font-size: var(--text-xl);
+  }
+
+  article section h3 {
+    font-size: var(--text-lg);
+  }
+}
+
 .hero-title-with-logo {
   display: flex;
   align-items: center;

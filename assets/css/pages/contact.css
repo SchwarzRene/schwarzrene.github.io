@@ -2,17 +2,63 @@
    Contact Page Specific Styles
    =================================================================== */
 
+/* Contact Hero with Background Image */
+.contact-hero {
+  background-image: url('/assets/images/apply.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Semi-transparent Overlay - Shows background image */
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.2);
+  z-index: 1;
+}
+
+.contact-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 350px;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    min-height: 250px;
+  }
+}
+
 /* Contact Form Section - Full Width */
 .contact-form-section {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   padding: var(--space-8);
-  background-image: url('/assets/images/apply.jpg');
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+    url('/assets/images/apply.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: overlay;
+  position: relative;
 }
 
 /* Contact Form */
@@ -79,6 +125,10 @@ article address {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .contact-hero {
+    min-height: 250px;
+  }
+
   /* Change background-attachment to scroll on mobile for better performance */
   .contact-form-section {
     background-attachment: scroll;
@@ -92,5 +142,26 @@ article address {
   form button[type="reset"] {
     width: 100%;
     margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    min-height: 180px;
+    background-position: center top;
+  }
+
+  .contact-form-section {
+    padding: var(--space-4);
+  }
+
+  #contact-form {
+    max-width: 100%;
+  }
+
+  form button[type="submit"],
+  form button[type="reset"] {
+    width: 100%;
+    margin: var(--space-2) 0;
   }
 }

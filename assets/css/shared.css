@@ -425,6 +425,9 @@ header {
   transition: all var(--transition-fast);
   border-radius: var(--radius-md);
   white-space: nowrap;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover {
@@ -611,12 +614,17 @@ header {
   background-color: transparent;
   border: 1px solid var(--color-gray-400);
   cursor: pointer;
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4);
   color: var(--color-white);
   border-radius: var(--radius-md);
   font-size: var(--text-lg);
   transition: all var(--transition-fast);
   flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-toggle:hover {
@@ -872,6 +880,10 @@ button,
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover,
@@ -926,6 +938,12 @@ fieldset {
   margin-bottom: var(--space-6);
 }
 
+@media (max-width: 480px) {
+  fieldset {
+    padding: var(--space-4);
+  }
+}
+
 legend {
   font-size: var(--text-lg);
   font-weight: var(--weight-bold);
@@ -958,6 +976,7 @@ select {
   font-family: var(--font-body);
   font-size: var(--text-base);
   transition: border-color var(--transition-fast);
+  min-height: 44px;
 }
 
 input:focus,
@@ -976,6 +995,19 @@ textarea:invalid {
 textarea {
   resize: vertical;
   min-height: 120px;
+}
+
+@media (max-width: 480px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+    padding: var(--space-4);
+  }
+
+  textarea {
+    min-height: 100px;
+  }
 }
 
 /* Field Hints & Errors */
