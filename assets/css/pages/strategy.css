@@ -48,6 +48,31 @@ article section:nth-child(even) {
   background-color: #0F1219;
 }
 
+/* Decorative chart images in section margins — only on wide screens */
+.section-img-left,
+.section-img-right {
+  display: none;
+}
+
+@media (min-width: 1120px) {
+  .section-img-left,
+  .section-img-right {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    opacity: 0.45;
+    box-shadow: 0 4px 16px rgba(196, 168, 107, 0.2);
+  }
+
+  .section-img-left  { left:  var(--space-6); }
+  .section-img-right { right: var(--space-6); }
+}
+
 /* Golden divider line effect */
 article section::before {
   content: '';
