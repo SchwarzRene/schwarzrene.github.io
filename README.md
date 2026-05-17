@@ -1,6 +1,10 @@
+<div align="center">
+  <img src="assets/images/logo.png" alt="Black Quant Empire Logo" width="150" height="150">
+  
 # Black Quant Empire (BQE)
 
 > Quantitativer Handel auf Basis von Mathematik und Algorithmen
+</div>
 
 ## Überblick
 
